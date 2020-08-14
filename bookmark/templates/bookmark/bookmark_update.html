@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+
+    {% block title %} 북마크 수정 {% endblock %}
+
+    {% block content %}
+
+    <meta charset="UTF-8">
+    <title>북마크 수정 기능</title>
+</head>
+<body>
+    <form action ="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Update" class="btn btn-info btn-sm">
+    </form>
+    {% endblock %}
+</body>
+</html>

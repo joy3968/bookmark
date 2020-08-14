@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>북마크 삭제 기능</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %} 삭제 확인 {% endblock %}
+
+    {% block content %}
+    <form action ="" method="post">
+        {% csrf_token %}
+        <div class="alert alert-danger">"{{object}}" 북마크를 삭제 하시겠습니까?</div>
+        <input type="submit" value="Delete" class="btn btn-danger">
+    </form>
+    {% endblock %}
+</body>
+</html>
